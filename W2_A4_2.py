@@ -1,8 +1,8 @@
 # ---------------------------------------------------------------
-# TITLE HERE
-# Author: Your Name
+# Fibonacci and Factorial Calculator Class
+# Author: Roxanne Prajapati
 # Description:
-#      
+#      Update the W2-A4.1 using object
 # ---------------------------------------------------------------
 
 class MathSeries:
