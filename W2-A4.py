@@ -21,7 +21,7 @@ if __name__ == "__main__":
     print("2. Fibonacci")
 
     choice = input("Enter choice (1/2): ")
-    n = int(input("Enter a number: ")) #need to ask user to enter a number for factorial
+    n = int(input("Enter a number: ")) #need to ask user to enter a number for factorial or fibonacci
 
     if choice == "1":
         ans = factorial(n) #missing the n parameter
