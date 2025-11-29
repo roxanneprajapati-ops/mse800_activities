@@ -28,9 +28,13 @@ class MathSeries:
         return self.fibonacci_recursive(n - 1) + self.fibonacci_recursive(n - 2)
 
     def fibonacci_series(self, n):
-        series = []
-        for i in range(n + 1):
-            series.append(self.fibonacci_recursive(n))
+        if n == 0:
+            return [0]
+        if n == 1:
+            return [0, 1]
+
+        series = self.fibonacci_series(n - 1)
+        series.append(series[-1] + series[-2])
         return series
 
 
