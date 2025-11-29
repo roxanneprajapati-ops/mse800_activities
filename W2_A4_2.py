@@ -24,12 +24,13 @@ class MathSeries:
             return 0
         if n == 1:
             return 1
+
         return self.fibonacci_recursive(n - 1) + self.fibonacci_recursive(n - 2)
 
     def fibonacci_series(self, n):
         series = []
         for i in range(n + 1):
-            series.append(self.fibonacci_recursive(i))
+            series.append(self.fibonacci_recursive(n))
         return series
 
 
