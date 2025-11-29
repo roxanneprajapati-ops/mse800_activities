@@ -12,5 +12,6 @@ print(Skills)
 print(Education)
 print(ContactDetails)
 print(certifications)
+print(round(4.4) + 3)
 
 
