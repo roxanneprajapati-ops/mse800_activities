@@ -8,20 +8,17 @@ import math
 
 
 class Calculator:
-    def __init__(self, choice, number):
-        self.choice = choice
-        self.number = number
 
-    def get_factorial(self):
-        if self.number == 0:
+    def get_factorial(self, number):
+        if number == 0:
             return 1
-        return math.factorial(self.number)
+        return math.factorial(number)
 
-    def fibonacci(self):
-        if self.number <= 1:
-            return self.number
+    def get_fibonacci(self, number):
+        if number <= 1:
+            return number
 
-        return self.number -1 + self.number - 2
+        return self.get_fibonacci(number -1) + self.get_fibonacci(number-2)
 
 if __name__ == "__main__":
     print("Choose an option:")
@@ -30,12 +27,12 @@ if __name__ == "__main__":
 
     choice = input("Enter choice (1/2): ")
     n = int(input("Enter a number: "))
-    calculator = Calculator(choice, n)
+    calculator = Calculator()
 
     if choice == "1":
-        ans = Calculator.get_factorial
+        ans = calculator.get_factorial(n)
     elif choice == "2":
-        ans = Calculator.fibonacci
+        ans = calculator.get_fibonacci(n)
     else:
         ans = "Invalid choice"
 
