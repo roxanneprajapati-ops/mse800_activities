@@ -1,6 +1,6 @@
 # ---------------------------------------------------------------
 # MathSeries Class
-# Author: Your Name
+# Author: Roxanne Prajapati
 # Description:
 #      Activity 4.3
 # ---------------------------------------------------------------
