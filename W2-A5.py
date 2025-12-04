@@ -54,13 +54,13 @@ class TemperatureConverter:
 
     def celsius_to_fahrenheit(self):
         """Convert C to Fahrenheit"""
-        result = (self.temperature * 9 / 5) + 32
-        print(f"{self.user_input} is converted to {result:.2f} degrees Fahrenheit.")
+        result = round((self.temperature * 9 / 5) + 32, 2)
+        print(f"{self.user_input} is converted to {result:.2F} degrees Fahrenheit.")
 
 
     def fahrenheit_to_celsius(self):
         """Convert F to Celsius"""
-        result = (self.temperature - 32) * 5 / 9
+        result = round((self.temperature - 32) * 5 / 9, 2)
         print(f"{self.user_input} is converted to {result:.2f} degrees Celsius.")
 
 
