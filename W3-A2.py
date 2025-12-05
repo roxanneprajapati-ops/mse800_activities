@@ -2,7 +2,7 @@
 # File Reader
 # Author: Roxanne Prajapati
 # Description:
-#      Program that read a file and count *
+#      Program that append to file
 # ---------------------------------------------------------------
 
 class FileReader:
@@ -21,6 +21,10 @@ class FileReader:
         except FileNotFoundError:
             print("File not found")
 
+    def append_to_file(self, new_content):
+        with open(self.filename, "a", encoding="utf-8") as content:
+            content.write(new_content)
+
 
 
 
@@ -30,7 +34,5 @@ class FileReader:
 if __name__ == "__main__":
     filename = "demo_file.txt"
     filereader = FileReader(filename)
-    result = filereader.read_file()
-    if result is not None:
-        print("Number of '*' characters: ", result)
+    filereader.append_to_file("End of File")
 
