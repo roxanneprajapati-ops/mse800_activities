@@ -13,8 +13,6 @@ The system uses Python classes to represent the main parts of the system and how
   - DataFactory.py
   - Table.py
   - Main.py
-- database/
-  - university.db
 - README.md
 - college.db
 - College_ERD.png
