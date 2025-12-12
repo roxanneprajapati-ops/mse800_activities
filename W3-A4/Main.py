@@ -53,7 +53,6 @@ def main():
         for instructor in instructors:
             print(instructor[0], instructor[1])
 
-        database_manager.close()
     except ValueError as error:
         print(error)
     finally:

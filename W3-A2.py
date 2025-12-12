@@ -26,10 +26,6 @@ class FileReader:
             content.write(new_content)
 
 
-
-
-
-
 # Run the program only when executed directly
 if __name__ == "__main__":
     filename = "demo_file.txt"
