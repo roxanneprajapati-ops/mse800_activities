@@ -20,6 +20,8 @@ The project supports:
 - clinic_ERD.png        # Visual representation of the database ER diagram
 
 
+## Demo Link
+https://www.youtube.com/watch?v=Liy1IUDW5AU
 
 ## Notes
 * Error handling is implemented for table creation and main execution.
