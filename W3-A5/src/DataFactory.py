@@ -93,5 +93,6 @@ class DataFactory:
             DataFactory.insert_patients(db)
             DataFactory.insert_doctors(db)
             DataFactory.insert_appointments(db)
+            print("Patients, doctors and appointments data inserted to database successfully")
         except ValueError as error:
             raise ValueError(f"Error while inserting data: {error}")

@@ -67,6 +67,7 @@ class Tables:
             Tables.create_patient_table(db)
             Tables.create_doctor_table(db)
             Tables.create_appointment_table(db)
+            print("Tables created successfully")
         except Exception as error:
             raise ValueError(f"Error creating tables: {error}")
 

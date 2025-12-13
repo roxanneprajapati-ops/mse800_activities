@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This project is an OOP-based clinic management system,developed with Python and SQLite, designed to handle patient records, doctor information, and appointment scheduling.
+This project is an OOP-based clinic management system,developed with Python and SQLite, 
+designed to handle patient records, doctor information, and appointment scheduling.
 
 The project supports:
 * Listing all patients aged over 65 (senior patients)
