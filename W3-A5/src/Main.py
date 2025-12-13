@@ -23,7 +23,7 @@ def main():
         #Insert clinic data
         DataFactory.insert_all_data(database_manager)
 
-        #Retrieve list all senior patients (age > 65)
+        #Retrieve the list of all senior patients with age above 65
         seniors = database_manager.fetch_all("""
             SELECT * FROM Patient
             WHERE (strftime('%Y','now') - strftime('%Y', DateOfBirth)) > 65
@@ -33,7 +33,7 @@ def main():
         for seniors in seniors:
             print(seniors)
 
-        #Retrieve Count ophthalmology doctors
+        #Retrieve the count of ophthalmology doctors
         optalmologists = database_manager.fetch_all("""
             SELECT COUNT(*) FROM Doctor
             WHERE Specialisation = 'Ophthalmology'
