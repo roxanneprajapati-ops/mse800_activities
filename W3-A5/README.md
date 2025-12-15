@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project is an OOP-based clinic management system,developed with Python and SQLite, 
-designed to handle patient records, doctor information, and appointment scheduling.
+designed to manage patient records, doctor information, and appointment scheduling.
 
 The project supports:
 * Listing all patients aged over 65 (senior patients)
@@ -20,7 +20,7 @@ The project supports:
 - clinic_ERD.png        # Visual representation of the database ER diagram
 
 
-## Demo Link
+## Video Presentation Link
 https://www.youtube.com/watch?v=Liy1IUDW5AU
 
 ## Notes
