@@ -6,6 +6,7 @@ This project is an OOP-based clinic management system,developed with Python and 
 designed to manage patient records, doctor information, and appointment scheduling.
 
 The project supports:
+* Insert records of patients, doctors and appointments
 * Listing all patients aged over 65 (senior patients)
 * Counting the total number of doctors specialising in ophthalmology
 
