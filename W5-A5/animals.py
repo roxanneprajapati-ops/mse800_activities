@@ -3,11 +3,6 @@
 # Author: Your Name
 # Description:
 #      This file contains all class definitions.
-#      The Animal class represents a generic animal with a name.
-#      It is extended by three intermediate classes: Mammal, Bird, and Fish,
-#      each storing a shared feature. Specific animal types such as Dog,
-#      Cat, Eagle, Penguin, Salmon, and Shark further specialise these
-#      classes and implement unique behaviours such as walking, flying, or swimming.
 # ---------------------------------------------------------------
 
 
@@ -17,20 +12,18 @@ class Animal:
         self.name = name
 
 
-# Mammal inherit from Animal
+# ---------- Classes that inherits from Animal ----------
 class Mammal(Animal):
     def __init__(self, name: str, feature: str):
         super().__init__(name)
         self.feature = feature
 
 
-# ---------- Classes that inherits from Animal ----------
 class Bird(Animal):
     def __init__(self, name: str, feature: str):
         super().__init__(name)
         self.feature = feature
 
-# Fish inherit from Animal
 class Fish(Animal):
     def __init__(self, name: str, feature: str):
         super().__init__(name)
