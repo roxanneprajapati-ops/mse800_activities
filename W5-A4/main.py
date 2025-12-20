@@ -1,6 +1,6 @@
 # ---------------------------------------------------------------
 # TITLE HERE
-# Author: Your Name
+# Author: Roxanne Prajapati
 # Description:
 #      
 # ---------------------------------------------------------------
@@ -12,6 +12,7 @@ def main():
     """
     Main function to run the program.
     """
+    # Initialize student, general staff, academic staff
     student = Student(101, "Alice")
     general_staff = General(201, "Bob", "TX12345", 30.5)
     academic_staff = Academic(301, "Dr. Smith", "TX67890", 12)
