@@ -1,3 +1,9 @@
+# ---------------------------------------------------------------
+# general.py
+# Author: Roxanne Prajapati
+# Description:
+#      General class inherits from Staff
+# ---------------------------------------------------------------
 from staff import Staff
 
 # Academic staff inherits from Staff
@@ -9,7 +15,7 @@ class Academic(Staff):
     def display_details(self):
         return (
             f"Academic Staff ID: {self.staff_id}, "
-            f"Name: {self.name}, "
+            f"Name: {self._name}, "
             f"Tax Number: {self.tax_number}, "
             f"Publications: {self.publications}"
         )
