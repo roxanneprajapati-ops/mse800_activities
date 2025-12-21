@@ -7,4 +7,4 @@ class Student(Person):
         self.student_id = student_id
     
     def display_details(self):
-        return f"Student ID: {self.student_id}, Name: {self.name}"
+        return f"Student ID: {self.student_id}, Name: {self._name}"
