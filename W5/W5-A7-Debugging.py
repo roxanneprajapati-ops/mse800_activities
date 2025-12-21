@@ -3,7 +3,7 @@
 # Author: Roxanne Prajapati
 # Explanation:
 #      The main program raised an AttributeError because of
-#      line 59 (print(s1.__age)). The attribute __age is private
+#      line 66 (print(s1.__age)). The attribute __age is private
 #      to the Person class, which means it cannot be accessed
 #      directly outside that class, including from a subclass
 #      or the main program.
