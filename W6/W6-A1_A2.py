@@ -7,6 +7,10 @@ class StudentDict:
     def get_passed_students(self, pass_mark=50):
         # Combine the two dictionaries and return only students
         # with score above 50
+        # Example snapshot of returned dictionary:
+        # {
+        #     "S1": {"name": "Ann", "score": 78}
+        # }
         return {
             student_id: {"name": name, "score": score}
             for (student_id, name), score in zip(
