@@ -61,3 +61,95 @@ exchange_cli/
 └── logs/
 └── app.log
 ```
+
+---
+
+## System Architecture
+The application follows a layered architecture:
+
+- **CLI Layer (`cli_app.py`)**  
+  Handles user input/output and menu display only.
+
+- **Service Layer (`exchange_service.py`)**  
+  Contains validation rules and business logic.
+
+- **Database Layer (`database_manager.py`)**  
+  Manages SQLite database access and schema.  
+  Implemented as a **Singleton** to ensure one shared database connection.
+
+- **Domain Models**  
+  - `ExchangeRate` – exchange rate data  
+  - `Conversion` – conversion transaction data  
+
+---
+
+## Database Schema
+The application uses a local SQLite database named `exchange.db`.
+
+### Table: `exchange_rate`
+| Column | Type | Description |
+|------|------|-------------|
+| id | INTEGER | Primary key |
+| base_currency | TEXT | Base currency code |
+| target_currency | TEXT | Target currency code |
+| rate | REAL | Exchange rate |
+| updated_at | TEXT | UTC timestamp |
+
+### Table: `conversion`
+| Column | Type | Description |
+|------|------|-------------|
+| id | INTEGER | Primary key |
+| amount | REAL | Original amount |
+| converted_amount | REAL | Converted amount |
+| rate_used | REAL | Rate applied |
+| timestamp | TEXT | UTC timestamp |
+
+---
+
+## How to Run the Application
+
+### Requirements
+- Python 3.9 or higher
+- No external libraries required
+
+### Steps
+1. Place all files in one folder
+2. Open a terminal in that folder
+3. Run the application:
+
+```bash
+python main.py
+```
+
+The database and tables are created automatically on first run.
+
+---
+
+## CLI Menu
+```
+1) View current exchange rate
+2) Update exchange rate
+3) Convert amount
+0) Exit
+```
+
+---
+
+## Scope and Limitations
+- Supports only **one currency pair**
+- Exchange rates are entered manually
+- Command-line interface only
+- No user authentication
+
+---
+
+## License
+Educational use only.
+
+---
+
+## Author
+Roxanne Prajapati  
+Week 6 – Activity 8  
+Currency Exchange CLI Application
+
