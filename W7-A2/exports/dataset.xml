@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<records><record><id>1</id><name>Toyota Corolla</name><year>2020</year><price_per_day>55</price_per_day></record><record><id>2</id><name>Honda Civic</name><year>2019</year><price_per_day>50</price_per_day></record><record><id>3</id><name>Mazda 3</name><year>2021</year><price_per_day>60</price_per_day></record></records>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota Corolla",
+    "year": 2020,
+    "price_per_day": 55
+  },
+  {
+    "id": 2,
+    "name": "Honda Civic",
+    "year": 2019,
+    "price_per_day": 50
+  },
+  {
+    "id": 3,
+    "name": "Mazda 3",
+    "year": 2021,
+    "price_per_day": 60
+  }
+]
