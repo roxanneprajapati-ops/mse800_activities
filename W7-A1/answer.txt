@@ -1,0 +1,11 @@
+1. The code runs without any error if I enter a supported notification type. 
+   But if I enter a notification type that is not supported it throws an "Invalid ntification type"
+
+2. Factory Design Pattern Usage
+    - The factory pattern is implemented at main.py NotificationFactory.create_notification(notification_type)
+    - The factory pattern is used to return the correct notification based on the provided notification type through create_notification.
+      the create_notification in NotificationFactory class is the one that calls the class the send the Notification.
+    - The factory pattern centralize sending the notification. Main.py doesnt need to know which class is used.
+
+3. Yes we can design this code without the factory pattern. We can remove the create_notification and add an if else condition and 
+call the class that sends the notification.
