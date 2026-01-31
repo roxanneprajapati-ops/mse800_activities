@@ -1,4 +1,3 @@
-import os
 from file_exporter_factory import FileExporterFactory
 
 def main():
