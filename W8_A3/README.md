@@ -1,6 +1,6 @@
-# AI-Powered CV Analysis Using OpenAI GPT-4.0
+# AI-Powered CV Analysis Using Gemini API
 
-This project analyzes CVs using OpenAI GPT-4.0 and categorizes experience into different job domains.
+This project analyzes CVs using Gemini API and categorizes experience into different job domains.
 
 ## Setup Instructions
 
