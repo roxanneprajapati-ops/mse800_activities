@@ -1,0 +1,27 @@
+name: cv_multi_container_app
+services:
+  cli:
+    build: .
+    container_name: cv_cli
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    volumes:
+      - .:/app
+      - ./inputs:/app/inputs
+      - ./output:/app/output
+    stdin_open: true
+    tty: true
+    command: python main.py
+
+  worker:
+    build: .
+    container_name: cv_worker
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - BATCH_CV_FILE=/app/inputs/resume-sample.pdf
+      - BATCH_OUT_FILE=/app/output/result.txt
+    volumes:
+      - .:/app
+      - ./inputs:/app/inputs
+      - ./output:/app/output
+    command: python run-batch.py
