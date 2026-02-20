@@ -1,4 +1,4 @@
-`pdb` is Python’s built-in debugger. It allows you to pause a program while it is running and inspect what is happening inside the code. No installation is required because it is included in Python’s standard library.
+`pdb` is Python’s built-in debugger. It allows to pause a program while it is running and inspect what is happening inside the code. No installation is required because it is included in Python’s standard library.
 
 To test the CV analyzer script, we only need to add one line:
 
@@ -16,7 +16,7 @@ When the program pauses, (Pdb) appears in the terminal. This indicates that the 
 
 ![alt text](image-1.png)
 
-At this point, you can inspect variables to detect problems such as extra spaces in the file path, incorrect file extensions, wrong directories, files that do not exist.
+We can inspect variables to detect problems such as extra spaces in the file path, incorrect file extensions, wrong directories, files that do not exist.
 
 ---
 
