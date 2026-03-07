@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Image Upload</title>
+    <style>
+        body {
+            background: green;
+        }
+    </style>
+    </head>
+    <body style="color:red">
+        <p>Hello Flask Framework!</p>
+        <p>Please go to <a href="/admin" style="color:red">Admin</a></p>
+
+        <h2>Upload Image</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <input type="submit" value="Show Image">
+        </form>
+        <div>
+        {{ image | safe }}
+    </div>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -10,18 +10,7 @@ def hello_flask():
         file.save("static/" + file.filename)
         image = f"<h2>Uploaded Image</h2><img src='/static/{file.filename}' width='300'>"
 
-    return f"""
-        <body style='background:green; color:white'>
-            <p>Hello Flask Framework!</p>
-            <p> Please go to <a href='/admin'>Admin</a></p>
-            <h2>Upload Image</h2>
-            <form method="POST" enctype="multipart/form-data">
-                <input type="file" name="image">
-                <input type="submit">
-            </form>
-            {image}
-        </body>
-        """
+    return render_template("index.html", image=image)
 
 
 @app.route("/admin")
