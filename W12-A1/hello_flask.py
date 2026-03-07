@@ -16,7 +16,7 @@ def bye():
 
 @app.route("/username/<name>")
 def username(name):
-    return f"Hello {name}"
+    return f"Hello {name.capitalize()}"
 
 
 if __name__ == "__main__":
