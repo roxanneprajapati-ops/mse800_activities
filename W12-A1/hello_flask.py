@@ -14,5 +14,10 @@ def admin():
 def bye():
     return "<p>Bye Flask!</p>"
 
+@app.route("/username/<name>")
+def username(name):
+    return f"Hello {name}"
+
+
 if __name__ == "__main__":
     app.run(debug=True)
