@@ -5,7 +5,7 @@ from google import genai
 
 # Code reference: https://ai.google.dev/gemini-api/docs
 # removed api key intentionally in git
-api_key = "AIzaSyCM2SmGki0lZQ2hzkfVEvHooyNnIMFaZIc"
+api_key = ""
 client = genai.Client(api_key=api_key)
 
 PROMPT_TEMPLATE = """
