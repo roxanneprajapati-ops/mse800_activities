@@ -12,8 +12,6 @@ from exchange_rate_service import ExchangeService
 def main():
     '''
     Start the application.
-
-    :return: None
     '''
     logger = get_logger()
     service = ExchangeService()

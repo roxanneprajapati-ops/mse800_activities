@@ -6,15 +6,6 @@
 # -----------------------------------------------------------------------------
 from datetime import datetime
 
-
-'''
-conversion.py
-Conversion domain model.
-'''
-
-from datetime import datetime
-
-
 class Conversion:
     '''
     Represents a currency conversion transaction.

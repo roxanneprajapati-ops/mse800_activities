@@ -4,7 +4,6 @@
 # Description:
 #      Handles all user interaction via the command line.
 # -----------------------------------------------------------------------------
-
 from exchange_rate_service import ExchangeService, ValidationError
 from database_manager import DatabaseManager, DatabaseError
 
@@ -66,9 +65,15 @@ class CurrencyExchangeCLI:
         '''
         Display the current exchange rate.
         '''
-        rate = self._service.get_current_rate()
-        print(f'Current rate: 1 {rate.base_currency} = {rate.rate} {rate.target_currency}')
-        print(f'Last updated (UTC): {rate.updated_at}')
+        rates = DatabaseManager().get_all_rates()
+
+        if not rates:
+            print('No exchange rates available.')
+            return
+
+        print('\nSaved exchange rates (latest first):')
+        for base, target, rate, updated_at in rates:
+            print(f'1 {base} = {rate} {target}  (updated: {updated_at} UTC)')
 
     def _update_rate(self):
         '''

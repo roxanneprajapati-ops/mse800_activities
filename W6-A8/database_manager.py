@@ -4,11 +4,6 @@
 # Description:
 #      SQLite connection, schema setup, and minimal persistence functions.
 # -----------------------------------------------------------------------------
-'''
-database_manager.py
-Singleton database manager for SQLite access.
-'''
-
 import sqlite3
 from exchange_rate import ExchangeRate
 from conversion import Conversion
@@ -102,6 +97,20 @@ class DatabaseManager:
             raise DatabaseError('No exchange rate found in database.')
 
         return ExchangeRate(*row)
+    
+    def get_all_rates(self):
+        '''
+        Retrieve all stored exchange rates (newest first).
+
+        :return: List of tuples (base_currency, target_currency, rate, updated_at).
+        '''
+        conn = self._connect()
+        rows = conn.execute(
+            'SELECT base_currency, target_currency, rate, updated_at '
+            'FROM exchange_rate ORDER BY id DESC'
+        ).fetchall()
+        return [(r['base_currency'], r['target_currency'], r['rate'], r['updated_at']) for r in rows]
+
 
     def insert_rate(self, rate: ExchangeRate):
         '''

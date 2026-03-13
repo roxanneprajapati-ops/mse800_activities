@@ -5,7 +5,7 @@ from google import genai
 
 # Code reference: https://ai.google.dev/gemini-api/docs
 # removed api key intentionally in git
-api_key = ""
+api_key = "AIzaSyCM2SmGki0lZQ2hzkfVEvHooyNnIMFaZIc"
 client = genai.Client(api_key=api_key)
 
 PROMPT_TEMPLATE = """
@@ -46,6 +46,21 @@ def analyze_cv(cv_text):
     )
     return response.text
 
+def clean_markdown(text):
+    import re
+    
+    # Convert * bullets to -
+    text = re.sub(r'^\s*\*\s+', '- ', text, flags=re.MULTILINE)
+    
+    # Remove bold (**text**)
+    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
+    
+    # Remove extra spaces after dash
+    text = re.sub(r'-\s+', '- ', text)
+    
+    return text.strip()
+
+
 if __name__ == "__main__":
     file_path = input("Enter CV file path (PDF/DOCX): ").strip()
 
@@ -62,8 +77,18 @@ if __name__ == "__main__":
         print("Unsupported file format!")
         exit()
 
-    print("\nAnalyzing CV with GPT-4.0...\n\n ", cv_text,"\n\n")
+    print("\nAnalyzing CV with Google Gemini...\n\n ", cv_text,"\n\n")
     analysis_result = analyze_cv(cv_text)
+
+    cleaned_result = clean_markdown(analysis_result)
     
-    print("\n--- CV Analysis Results ---\n")
-    print(analysis_result)
+    # print("\n--- CV Analysis Results ---\n")
+    # print(analysis_result)
+
+    print("\n" + "=" * 60)
+    print("           CV ANALYSIS RESULTS")
+    print("=" * 60 + "\n")
+
+    print(cleaned_result)
+
+    print("\n" + "=" * 60)

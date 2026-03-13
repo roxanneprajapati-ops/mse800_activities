@@ -8,14 +8,6 @@
 from datetime import datetime
 
 
-'''
-exchange_rate.py
-ExchangeRate domain model.
-'''
-
-from datetime import datetime
-
-
 class ExchangeRate:
     '''
     Represents a single exchange rate from a base currency to a target currency.
