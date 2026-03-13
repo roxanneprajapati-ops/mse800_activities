@@ -4,10 +4,10 @@ Examples: create folders, get the current working directory.
 SYS - sys library gives access to Python system settings and program arguments.
 Examples: read command line arguments, exit a program.
 
-NUMPY - is used for numerical and scientific computing. It works with arrays and fast mathematical calculations.
+NUMPY - is use for numerical and scientific computing. It works with arrays and fast mathematical calculations.
 Examples: matrix calculations, data analysis.
 
-pathlib - used to handle file and folder paths in a simple way.
+pathlib - use to handle file and folder paths in a simple way.
 Examples: create file paths, check if a file exists.
 
 datetime - library works with dates and time.
@@ -25,10 +25,10 @@ Examples: build small websites, create APIs.
 fastapi - is a framework used to build fast APIs with Python.
 Examples: create REST APIs, build backend services.
 
-bcrypt - is used to securely hash passwords.
+bcrypt - is use to securely hash passwords.
 Examples: store encrypted passwords, verify login passwords.
 
-pytest - is used to test Python programs
+pytest - is use to test Python programs
 Examples: test functions, run automated tests
 
 pylint - checks Python code for errors and coding standards
