@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="box">
+        <h2>BMI Calculator</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" name="weight" step="0.1" placeholder="Weight (kg)" required>
+            <input type="number" name="height" step="0.1" placeholder="Height (cm)" required>
+            <button type="submit">Calculate BMI</button>
+            <a href="/" style="text-decoration:none;">
+                <button type="button">Clear</button>
+            </a>
+        </form>
+
+        {% if bmi %}
+            <p><strong>BMI:</strong> {{ bmi }}</p>
+            <p><strong>Category:</strong> {{ category }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
