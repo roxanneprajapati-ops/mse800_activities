@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Book an Appointment</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="student_name" placeholder="Student Name" required>
+            <input type="date" name="booking_date" required>
+            <select name="booking_time" required>
+                <option value="">Select Time</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+            </select>
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <a class="link-btn" href="/">Back to BMI Page</a>
+
+        {% if booking_message %}
+            <p class="message">{{ booking_message }}</p>
+        {% endif %}
+
+        {% if bookings %}
+            <h3>Current Bookings</h3>
+            <ul>
+                {% for booking in bookings %}
+                    <li>{{ booking.student_name }} - {{ booking.booking_date }} at {{ booking.booking_time }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
