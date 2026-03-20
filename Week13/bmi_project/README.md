@@ -43,5 +43,3 @@ If valid:
 - Success message is shown
 
 ---
-
-## File Structure
