@@ -28,7 +28,7 @@ def bmi_calculator(request):
                 category = "Overweight"
 
 
-            client = genai.Client(api_key="")
+            client = genai.Client(api_key="AIzaSyBl2BrNAX7ITzBfiHGJDsvAbjCxwGPlD7Y")
 
             prompt = f"""
                     Create a simple one-month diet and exercise plan.

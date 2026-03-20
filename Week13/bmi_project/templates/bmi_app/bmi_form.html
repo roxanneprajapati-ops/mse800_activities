@@ -28,7 +28,7 @@
             border: none;
             cursor: pointer;
         }
-        .clear-btn {
+        .clear-btn, .booking-btn {
             display: inline-block;
             width: 100%;
             padding: 10px;
@@ -48,6 +48,10 @@
             background: #f8f8f8;
             padding: 10px;
             border-radius: 6px;
+        }
+
+        .booking-btn:hover {
+            background: #006666;
         }
     </style>
 </head>
@@ -69,6 +73,9 @@
                 <button type="button">Clear</button>
             </a>
         </form>
+        <a href="{% url 'book_appointment' %}" class="booking-btn">
+            Go to Booking Page
+        </a>
         {% if bmi %}
             <p><strong>BMI:</strong> {{ bmi }}</p>
             <p><strong>Category:</strong> {{ category }}</p>
@@ -76,7 +83,7 @@
 
         {% if plan %}
             <h3>1-Month Diet and Exercise Plan</h3>
-            {{ plan|safe }}
+            <section style="text-align:left">{{ plan|safe }}</section>
         {% endif %}
 
         {% if error_message %}
