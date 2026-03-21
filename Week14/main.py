@@ -27,6 +27,9 @@ def main():
     multiply(3,5)
     subtract(b=5, a=3)
 
+    data = {'a': 2, 'b': 4}
+    divide(**data)
+
 
 if __name__ == "__main__":
     main()
