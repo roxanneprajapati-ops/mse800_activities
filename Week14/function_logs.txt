@@ -1,0 +1,20 @@
+Function: add
+Arguments: args=(), kwargs={'a': 3, 'b': 5}
+Error: name 'start' is not defined
+Execution time before error: 0.000025 seconds
+----------------------------------------
+Function: multiply
+Arguments: args=(3, 5), kwargs={}
+Error: name 'start' is not defined
+Execution time before error: 0.000021 seconds
+----------------------------------------
+Function: subtract
+Arguments: args=(), kwargs={'b': 5, 'a': 3}
+Error: name 'start' is not defined
+Execution time before error: 0.000021 seconds
+----------------------------------------
+Function: display_message
+Arguments: args=(), kwargs={'greeting': 'Good morning', 'name': 'Roxanne'}
+Error: name 'start' is not defined
+Execution time before error: 0.000141 seconds
+----------------------------------------
